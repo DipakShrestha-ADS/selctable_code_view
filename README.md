@@ -11,29 +11,83 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+# Selectable Code view
+
+A widget to view code with the respective syntax highlighter and feature to zoom in & out, select the code, copy & share it.
 
 ## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+-Display your code using syntax highlighter and code formatter for the following languages:
+    -**C**
+    -**C++**
+    -**Dart/Flutter**
+    -**Java**
+    -**Javascript**
+    -**Kotlin**
+    -**Swift**
+    -**YAML**
+-Zoom in and out the code for better viewing experiencing.
+-Can Copy the whole code
+-Selection enabled
+-Copy or share the selected code
+-Different themes available
+    -**standard**
+    -**dracula**
+    -**ayuDark**
+    -**ayuLight**
+    -**gravityLight**
+    -**gravityDark**
+    -**monokaiSublime**
+    -**obsidian**
+    -**oceanSunset**
+    -**vscodeDark**
+    -**vscodeLight**
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add Selectable Code View to your pubspec.yaml file:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  selectable_code_view:
 ```
 
-## Additional information
+Import selectable code view in files that it will be used:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+  import 'package:selectable_code_view/selectable_code_view.dart';
+```
+```dart
+Widget build(BuildContext context) {
+  return MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: const Text(
+          'Selectable Code View',
+        ),
+      ),
+      body: Center(
+        child: SelectableCodeView(
+          code: code, // Code text
+          language: Language.DART, // Language
+          languageTheme: LanguageTheme.vscodeDark(), // Theme
+          fontSize: 12.0, // Font size
+          withZoom: true, // Enable/Disable zoom icon controls
+          withLinesCount: true, // Enable/Disable line number
+          expanded: false, // Enable/Disable container expansion
+        ),
+      ),
+    ),
+  );
+}
+```
+##Result
+![alt text](https://github.com/DipakShrestha-ADS/selctable_code_view/blob/dev/screenshots/main.png)
+![alt text](https://github.com/DipakShrestha-ADS/selctable_code_view/blob/dev/screenshots/with_copy_share.png)
+![alt text](https://github.com/DipakShrestha-ADS/selctable_code_view/blob/dev/screenshots/share.png)
+
+## Additional information
+Want to contribute to the project? We will be proud to highlight you as one of our collaborators.
+
+Any contribution is welcome!
+
+##If you have any queries, email me to dipak.shrestha@eemc.edu.np
