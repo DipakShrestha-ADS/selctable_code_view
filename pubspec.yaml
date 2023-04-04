@@ -1,7 +1,7 @@
 name: selectable_code_view
-description: A new Flutter package project.
+description: A widget to view code with the respective syntax highlighter and feature to select the code, copy & share it.
 version: 0.0.1
-homepage:
+homepage: https://github.com/DipakShrestha-ADS/selctable_code_view
 
 environment:
   sdk: '>=2.19.6 <3.0.0'
