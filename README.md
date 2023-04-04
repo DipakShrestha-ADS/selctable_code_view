@@ -11,7 +11,7 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-# Selectable Code view
+# ```yaml Selectable Code view```
 
 A widget to view code with the respective syntax highlighter and feature to zoom in & out, select the code, copy & share it.
 
